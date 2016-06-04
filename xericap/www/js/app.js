@@ -50,12 +50,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+<<<<<<< HEAD
+  .state('tab.gallery', {
+      url: '/gallery',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-gallery': {
+          templateUrl: 'templates/tab-gallery.html',
+          controller: 'GallCtrl'
         }
       }
     })
@@ -68,6 +69,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+=======
+>>>>>>> master
 
   .state('tab.account', {
     url: '/account',

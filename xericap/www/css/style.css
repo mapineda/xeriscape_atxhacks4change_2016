@@ -1,1 +1,66 @@
 /* Empty. Add your own CSS if you like */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+.main-section::before {
+  background-color: black;
+  bottom: 0;
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: .65;
+}
+
+.main-section {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.first-section {
+  background: url(../img/succulents1.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.section-text {
+  color: white;
+  position: relative;
+  text-align: center;
+  top: 40%;
+}
+
+.section-text > span.head-text {
+  color: white;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.section-text > span {
+  font-weight: 200;
+}
+
+.scroll {
+  height: 100%;
+  width: 100%;
+}
+
+.second-section {
+  background-color: #B8C7DA;
+}
+
+.third-section {
+  background-color: #B94962;
+}
+
+.fourth-section {
+  background-color: #3F4A5E;
+}

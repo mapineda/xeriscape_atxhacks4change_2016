@@ -50,6 +50,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+<<<<<<< HEAD
   .state('tab.gallery', {
       url: '/gallery',
       views: {
@@ -68,6 +69,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+=======
+>>>>>>> master
 
   .state('tab.account', {
     url: '/account',

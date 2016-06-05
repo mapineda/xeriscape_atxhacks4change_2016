@@ -55,11 +55,19 @@ body {
 }
 
 .second-section {
+<<<<<<< HEAD
  background-color: #B8C7DA ;
 }
 
 .third-section {
  background-color: #B94962 ;
+=======
+ background-color: #B94962;
+}
+
+.third-section {
+ background-color: #3A7EA6;
+>>>>>>> 6eebdd2996299a21a6ad0ec90765886518a7f4f0
 }
 
 .fourth-section {

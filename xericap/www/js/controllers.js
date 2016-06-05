@@ -8,7 +8,6 @@ angular.module('starter.controllers', [])
     $scope.gallTitle = '<i class="icon ion-camera sherpa" ng-click="takeImage()" ></i>';
 
     $scope.takeImage = function() {
-
       var options = {
         quality: 80,
         destinationType: Camera.DestinationType.DATA_URL,

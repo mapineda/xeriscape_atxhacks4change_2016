@@ -5,7 +5,28 @@ angular.module('starter.controllers', [])
 
 .controller("GallCtrl", function($scope, $cordovaCamera, $ionicBackdrop, $ionicModal, $ionicSlideBoxDelegate, $ionicScrollDelegate) {
 
-    $scope.gallTitle = '<i class="icon ion-camera sherpa"></i>';
+    $scope.gallTitle = '<i class="icon ion-camera sherpa" ng-click="takeImage()" ></i>';
+
+    $scope.takeImage = function() {
+
+      var options = {
+        quality: 80,
+        destinationType: Camera.DestinationType.DATA_URL,
+        sourceType: Camera.PictureSourceType.CAMERA,
+        allowEdit: true,
+        encodingType: Camera.EncodingType.JPEG,
+        targetWidth: 250,
+        targetHeight: 250,
+        popoverOptions: CameraPopoverOptions,
+        saveToPhotoAlbum: false
+      };
+
+      $cordovaCamera.getPicture(options).then(function(imageData) {
+        $scope.srcImage = "data:image/jpg;base64," + imageData;
+      }, function(err) {
+        //err
+      });
+    }
 
     $scope.images = [{
       src: 'img/xer1.png'
@@ -88,41 +109,6 @@ angular.module('starter.controllers', [])
     }, {
       src:'img/xeriscape2.jpg'
     }];
-
-    $scope.loadImages = function() {
-        for(var i = 0; i < 100; i++) {
-            $scope.images.push({id: i, images});
-        }
-    }
-
-    $scope.showImages = function(index) {
-      $scope.activeSlide = index;
-      $scope.showModal('templates/gallery-zoomview.html');
-    };
-
-    $scope.showModal = function(templateUrl) {
-      $ionicModal.fromTemplateUrl(templateUrl, {
-        scope: $scope
-      }).then(function(modal) {
-        $scope.modal = modal;
-        $scope.modal.show();
-      });
-    }
-
-    $scope.closeModal = function() {
-      $scope.modal.hide();
-      $scope.modal.remove()
-    };
-
-    $scope.updateSlideStatus = function(slide) {
-      var zoomFactor = $ionicScrollDelegate.$getByHandle('scrollHandle' + slide).getScrollPosition().zoom;
-      if (zoomFactor == $scope.zoomMin) {
-        $ionicSlideBoxDelegate.enableSlide(true);
-      } else {
-        $ionicSlideBoxDelegate.enableSlide(false);
-      }
-    };
-
 
 })
 

@@ -1,9 +1,17 @@
 <ion-view view-title="Account">
   <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
+    <div class="account-content">
+      <img class="user-picture" ng-src="{{userImage}}">
+      <p class="user-name">{{name}}</p>
+      <p class="user-location">{{location}}</p>
+      <a href="#" class="follow-link">Edit Profile</a>
+      <p class="user-biography">{{biography}}</p>
+      <p class="recent-header">Recent Posts</p>
+      <div class="image-block">
+        <div class="row image-row" ng-repeat="post in posts">
+              <img ng-src="{{post.src}}" width="100%" />
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

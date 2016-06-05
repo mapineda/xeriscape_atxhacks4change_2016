@@ -32,11 +32,15 @@ body {
  background-attachment: fixed;
 }
 
+.first-section img {
+  margin-bottom: 80px;
+}
+
 .section-text {
  color: white;
  position: relative;
  text-align: center;
- top: 40%;
+ top: 17.5%;
 }
 
 .second-section .section-text, .third-section .section-text, .fourth-section .section-text, .fifth-section .section-text,
@@ -259,4 +263,66 @@ input[type=checkbox]:checked ~ label .hamburger-menu > .line-3 {
 
 input[type=checkbox]:checked ~ label + .mobile-menu {
   transform: translateX(0px);
+}
+
+/* Account page stuff */
+.account-content {
+  text-align: center;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.user-name {
+  font-size: 2.25em;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin: 10px 0 20px;
+}
+
+.user-location {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.user-picture {
+  border-radius: 50%;
+}
+
+.user-biography {
+  margin-top: 25px;
+}
+
+.follow-link {
+  padding: 10px 50px;
+  border-radius: 25px;
+  border: 1px solid black;
+  margin: 10px 0;
+  color: black;
+  text-decoration: none;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.recent-header {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin: 0 30px 10px;
+  font-size: 1.35em;
+}
+
+.image-block {
+  margin-bottom: 15px;
+}
+
+.image-row {
+  display: inline-block;
+  margin: 2px;
+  padding: 2px;
+  width: 100px;
+}
+
+.image-row img {
+  height: 100px;
+  width: 100px;
 }

@@ -150,4 +150,26 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
+
+  $scope.name = 'John Greene';
+
+  $scope.userImage = 'img/m-emp.png';
+
+  $scope.location = 'Austin | Westlake';
+
+  $scope.biography = "Rakes peacocks, squeal garden woof. Veterinarian at Seeder eggs with watermelon ostriches. Kidney beans ostrich trucks. Utters are weathervane foal est. Utters are weathervane foal est."
+
+  $scope.posts =[{
+    src: 'img/xer1.png'
+  }, {
+    src: 'img/succulents1.png'
+  }, {
+    src: 'img/xeriscaping2.png'
+  }, {
+    src: 'img/xer2.png'
+  },{
+    src: 'img/xeriscape6.jpg'
+  }, {
+    src: 'img/xeriscaping4.jpg'
+  }]
 });

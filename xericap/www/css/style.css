@@ -326,3 +326,7 @@ input[type=checkbox]:checked ~ label + .mobile-menu {
   height: 100px;
   width: 100px;
 }
+
+.sherpa {
+  font-size: 24px;
+}

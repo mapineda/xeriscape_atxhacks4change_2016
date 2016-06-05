@@ -5,7 +5,7 @@ angular.module('starter.controllers', [])
 
 .controller("GallCtrl", function($scope, $cordovaCamera, $ionicBackdrop, $ionicModal, $ionicSlideBoxDelegate, $ionicScrollDelegate) {
 
-    $scope.gallTitle = '<i class="icon ion-camera sherpa"></i>';
+    $scope.gallTitle = '<i class="icon ion-camera sherpa" ng-click=" " ></i>';
 
     $scope.images = [{
       src: 'img/xer1.png'

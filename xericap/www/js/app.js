@@ -33,8 +33,8 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
 
   // login state
   .state('login', {
-    url: '/login',
-    templateUrl: 'templates/login/html'
+    url: '/',
+    templateUrl: 'templates/login.html'
     controller: 'LogCtrl'
   })
 
@@ -87,6 +87,6 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/explore');
+  $urlRouterProvider.otherwise('/');
 
 });

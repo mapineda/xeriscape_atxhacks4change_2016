@@ -43,9 +43,8 @@ body {
  top: 17.5%;
 }
 
-.second-section .section-text, .third-section .section-text, .fourth-section .section-text, .fifth-section .section-text,
-.footer-section .section-text {
-  top: 25%;
+.second-section .section-text, .third-section .section-text, .fourth-section .section-text, .fifth-section .section-text {
+  top: 20%;
 }
 
 .italics {
@@ -134,9 +133,12 @@ footer {
   background-color: #120834;
 }
 
+.footer-section .section-text {
+  top: 12.5%;
+}
 .footer-section  .icon-caption {
   line-height: 35px;
-  margin-top: 65px;
+  margin-top: 115px;
 }
 
 .footer-icons {

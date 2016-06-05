@@ -1,8 +1,7 @@
-
-<ion-view view-title="{{ gallTitle }}">
+<ion-view view-title="Gallery">
   <ion-content ng-controller="GallCtrl" ng-init="loadImages()">
     <img ng-src="{{srcImage || 'img/shutter2.png'}}" id="srcImage" width="150 " height="150" style="display: block; margin: 0 auto; margin-top: 15px; margin-bottom: 5px;"/>
-    
+   
     <div class="row" ng-repeat="image in images" ng-if="$index % 4 === 0">
         <div class="col col-25" ng-if="$index < images.length">
             <img ng-src="{{images[$index].src}}" width="100%" />

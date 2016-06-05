@@ -3,7 +3,7 @@ angular.module('starter.controllers', [])
 .controller('ExpCtrl', function($scope) {})
 
 
-.controller("GallCtrl", function($scope) {
+.controller("GallCtrl", function($scope, $ionicBackdrop, $ionicModal, $ionicSlideBoxDelegate, $ionicScrollDelegate) {
 
     $scope.images = [{
       src: 'img/xer1.png'
@@ -56,7 +56,7 @@ angular.module('starter.controllers', [])
     }, {
       src: 'img/succulents3.png'
     }, {
-      src: 'img/agavespiral.jpg'
+      src: 'img/xeriscaping2.png'
     }, {
       src: 'img/museumpic13.jpg'
     }, {
@@ -93,7 +93,38 @@ angular.module('starter.controllers', [])
         }
     }
 
+    $scope.showImages = function(index) {
+      $scope.activeSlide = index;
+      $scope.showModal('templates/gallery-zoomview.html');
+    };
+
+    $scope.showModal = function(templateUrl) {
+      $ionicModal.fromTemplateUrl(templateUrl, {
+        scope: $scope
+      }).then(function(modal) {
+        $scope.modal = modal;
+        $scope.modal.show();
+      });
+    }
+
+    $scope.closeModal = function() {
+      $scope.modal.hide();
+      $scope.modal.remove()
+    };
+
+    $scope.updateSlideStatus = function(slide) {
+      var zoomFactor = $ionicScrollDelegate.$getByHandle('scrollHandle' + slide).getScrollPosition().zoom;
+      if (zoomFactor == $scope.zoomMin) {
+        $ionicSlideBoxDelegate.enableSlide(true);
+      } else {
+        $ionicSlideBoxDelegate.enableSlide(false);
+      }
+    };
+
+
 })
+
+
 
 
 // .controller('GallCtrl', function($scope, Chats) {

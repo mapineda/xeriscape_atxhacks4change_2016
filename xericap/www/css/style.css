@@ -6,7 +6,7 @@ body {
  width: 100%;
 }
 
-.main-section::before {
+.first-section::before {
  background-color: black;
  bottom: 0;
  content: '';
@@ -39,14 +39,33 @@ body {
  top: 40%;
 }
 
+.second-section .section-text, .third-section .section-text, .fourth-section .section-text, .fifth-section .section-text,
+.footer-section .section-text {
+  top: 25%;
+}
+
+.italics {
+  font-style: italic;
+}
+
+
 .section-text > span.head-text {
  color: white;
- font-size: 3em;
+ font-size: 3.75em;
  font-weight: 700;
+ letter-spacing: 1px;
 }
 
 .section-text > span {
  font-weight: 200;
+}
+
+.fifth-section span, .fifth-section p {
+  color: black;
+}
+
+.main-section.fifth-section .icon, .main-section.fifth-section a {
+  color: #00AB91;
 }
 
 .scroll {
@@ -55,17 +74,75 @@ body {
 }
 
 .second-section {
- background-color: #B8C7DA ;
+ background-color: #3A7EA6;
 }
 
 .third-section {
- background-color: #B94962 ;
+ background-color: #B94962;
 }
 
 .fourth-section {
- background-color: #3F4A5E ;
+ background-color: #007664;
 }
 
+.fifth-section {
+  background-color: white;
+}
+
+.section-text > span.lead-text {
+  font-size: .95em;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.icon-caption {
+  font-size: 22pt;
+  font-weight: 200;
+  margin-top: 20px;
+}
+
+.info-text {
+  line-height: 30px;
+  margin: 25px 40px 40px;
+}
+
+.main-section .icon {
+  font-size: 4em;
+  margin: 10px 0;
+  position: relative;
+  top: 5px;
+}
+
+.learn-more-link {
+  color: white;
+  padding: 15px 45px;
+  border-radius: 26px;
+  border: 1px solid white;
+  text-decoration: none;
+}
+
+.fifth-section .learn-more-link {
+  border-color: #00AB91;
+}
+
+footer {
+  background-color: #120834;
+}
+
+.footer-section  .icon-caption {
+  line-height: 35px;
+  margin-top: 65px;
+}
+
+.footer-icons {
+  width: 50%;
+  margin: 15px auto 0;
+}
+
+.footer-icons .icon:first-child {
+  margin-right: 35px;
+}
 /* IMAGE GALLERY STYLING  */
 
 .image-list-thumb {
@@ -95,70 +172,91 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center, center;
-=======
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  height: 100%;
-  width: 100%;
 }
 
-.main-section::before {
-  background-color: black;
-  bottom: 0;
-  content: '';
-  left: 0;
-  right: 0;
-  top: 0;
+.hamburger-menu {
+  height: 25px;
+  width: 20px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 55;
+  transition: all 0.2s;
+}
+
+.menu-line {
+  height: 2px;
+  width: 100%;
+  background-color: white;
   position: absolute;
+}
+
+.line-1 {
+  top: 6px;
+  right: 0;
+  transition: all 0.2s;
+}
+
+.line-2 {
+  top: 12px;
+  transition: all 0.2s;
+}
+
+.line-3 {
+  top: 18px;
+  right: 0;
+  transition: all 0.2s;
+}
+
+input[type=checkbox]#open-menu{
+  display: none;
+}
+
+/* arrow animation */
+/*.hamburger-menu:hover > .line-1 {
+  width: 12px;
+  top: 8px;
+  right: 0px;
+  transform: rotate(35deg);
+}
+
+.hamburger-menu:hover > .line-3 {
+  width: 12px;
+  top: 16px;
+  right: 0;
+  transform: rotate(-35deg);
+}*/
+
+/* close animation */
+input[type=checkbox]:checked ~ label .hamburger-menu {
+    transform: translateX(200px);
+}
+
+input[type=checkbox]:checked ~ label .hamburger-menu > .line-1 {
+  transform: rotate(45deg);
+  top: 6px;
+}
+
+input[type=checkbox]:checked ~ label .hamburger-menu > .line-2 {
+  opacity: 0;
+}
+
+input[type=checkbox]:checked ~ label .hamburger-menu > .line-3 {
+  transform: rotate(-45deg);
+  top: 6px;
+}
+
+.mobile-menu {
+  transform: translateX(-1000px);
+  width: 200px;
   height: 100%;
-  width: 100%;
-  opacity: .65;
+  background: #ccc;
+  color: black;
+  position: fixed;
+  transition: all 0.2s;
+  z-index: 200;
 }
 
-.main-section {
-  height: 100%;
-  position: relative;
-  width: 100%;
-}
-
-.first-section {
-  background: url(../img/succulents1.png);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.section-text {
-  color: white;
-  position: relative;
-  text-align: center;
-  top: 40%;
-}
-
-.section-text > span.head-text {
-  color: white;
-  font-size: 3em;
-  font-weight: 700;
-}
-
-.section-text > span {
-  font-weight: 200;
-}
-
-.scroll {
-  height: 100%;
-  width: 100%;
-}
-
-.second-section {
-  background-color: #B8C7DA;
-}
-
-.third-section {
-  background-color: #B94962;
-}
-
-.fourth-section {
-  background-color: #3F4A5E;
-
+input[type=checkbox]:checked ~ label + .mobile-menu {
+  transform: translateX(0px);
 }

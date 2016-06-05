@@ -4992,11 +4992,14 @@ ion-tabs.tabs-striped.tabs-color-active-stable .tab-item.tab-item-active, ion-ta
 ion-tabs.tabs-color-active-positive .tab-item {
   color: #444; }
   ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
-    color: #387ef5; }
+    color: #E010B3; }
 
 ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.activated {
-  border-color: #387ef5;
-  color: #387ef5; }
+  /*border-color: #387ef5;
+  color: #387ef5; */
+  border-color: #E010B3;
+  color: #E010B3;
+}
 
 ion-tabs.tabs-color-active-calm .tab-item {
   color: #444; }

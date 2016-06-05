@@ -3,7 +3,9 @@ angular.module('starter.controllers', [])
 .controller('ExpCtrl', function($scope) {})
 
 
-.controller("GallCtrl", function($scope, $ionicBackdrop, $ionicModal, $ionicSlideBoxDelegate, $ionicScrollDelegate) {
+.controller("GallCtrl", function($scope, $cordovaCamera, $ionicBackdrop, $ionicModal, $ionicSlideBoxDelegate, $ionicScrollDelegate) {
+
+    $scope.gallTitle = '<i class="icon ion-camera sherpa"></i>';
 
     $scope.images = [{
       src: 'img/xer1.png'

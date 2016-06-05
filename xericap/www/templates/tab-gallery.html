@@ -1,5 +1,5 @@
 
-<ion-view view-title="Gallery">
+<ion-view view-title="{{ gallTitle }}">
   <ion-content ng-controller="GallCtrl" ng-init="loadImages()">
     <div class="row" ng-repeat="image in images" ng-if="$index % 4 === 0">
         <div class="col col-25" ng-if="$index < images.length">

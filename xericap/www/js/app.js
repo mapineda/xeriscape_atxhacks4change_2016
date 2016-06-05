@@ -31,13 +31,6 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-  // login state
-  .state('login', {
-    url: '/',
-    templateUrl: 'templates/login.html'
-    controller: 'LogCtrl'
-  })
-
   // setup an abstract state for the tabs directive
     .state('tab', {
     url: '/tab',
@@ -87,6 +80,6 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/tab/explore');
 
 });

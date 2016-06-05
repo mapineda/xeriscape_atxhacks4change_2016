@@ -31,6 +31,13 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+  // login state
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login/html'
+    controller: 'LogCtrl'
+  })
+
   // setup an abstract state for the tabs directive
     .state('tab', {
     url: '/tab',
